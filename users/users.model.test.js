@@ -11,7 +11,6 @@ describe('user model', () => {
   describe('insert()', () => {
     it('should insert the user', async () => {
       arr = await Users.insert({ username: 'test' });
-      console.log('-----------', arr)
       let resource = await Users.get(arr[0]);
       expect(resource).toEqual({ username: 'test' });
     });
